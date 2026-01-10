@@ -1,0 +1,101 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 10px;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#panelA h2 {
+    background-color: #007bff; /* Azul */
+    color: white;
+}
+
+#panelB h2 {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+}
+
+.competitor-panel {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.score-btn {
+    flex: 1 1 45%;
+    padding: 15px 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    min-width: 120px;
+}
+
+.score-btn:nth-child(1) { background-color: #28a745; color: white; }
+.score-btn:nth-child(2) { background-color: #ffc107; color: #333; }
+.score-btn:nth-child(3) { background-color: #17a2b8; color: white; }
+
+.penalty-btn {
+    background-color: #6c757d !important;
+    color: white;
+    flex: 1 1 100%;
+}
+
+.score-btn:active {
+    opacity: 0.8;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#reset-btn {
+    background-color: #000;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.timer-action {
+    padding: 15px 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.timer-action.start { background-color: #28a745; color: white; }
+.timer-action.stop { background-color: #dc3545; color: white; }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Puntuación Taekwondo</title>
+    <link rel="stylesheet" href="control.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+
+<h1>🥋 Control de Taekwondo</h1>
+
+<div class="competitor-panel" id="panelA">
+    <h2>Competidor A (Azul)</h2>
+    <div class="buttons">
+        <button class="score-btn" data-competitor="A" data-points="1">Puño (+1)</button>
+        <button class="score-btn" data-competitor="A" data-points="2">Petal (+2)</button>
+        <button class="score-btn" data-competitor="A" data-points="3">Cabeza (+3)</button>
+        <button class="score-btn penalty-btn" data-competitor="B" data-points="1">Falta (-1A / +1B)</button>
+    </div>
+</div>
+
+<hr>
+
+<div class="competitor-panel" id="panelB">
+    <h2>Competidor B (Rojo)</h2>
+    <div class="buttons">
+        <button class="score-btn" data-competitor="B" data-points="1">Puño (+1)</button>
+        <button class="score-btn" data-competitor="B" data-points="2">Petal (+2)</button>
+        <button class="score-btn" data-competitor="B" data-points="3">Cabeza (+3)</button>
+        <button class="score-btn penalty-btn" data-competitor="A" data-points="1">Falta (-1B / +1A)</button>
+    </div>
+</div>
+
+<div class="actions">
+    <button id="start-timer-btn" class="timer-action start">INICIAR TEMPORIZADOR</button>
+    <button id="stop-timer-btn" class="timer-action stop">PAUSAR TEMPORIZADOR</button>
+</div>
+
+<div class="actions">
+    <button id="reset-btn">REINICIAR TODO</button>
+</div>
+
+<script src="control.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marcador Taekwondo - Puntuación en Vivo</title>
+  <link rel="stylesheet" href="scoredboard.css">
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+
+<div class="scoreboard-container">
+  <div class="competitor blue-side">
+    <h2 class="name">Competidor A</h2>
+    <div class="score" id="scoreA">0</div>
+    <div class="penalties">Faltas: <span id="penaltiesA">0</span></div>
+  </div>
+
+  <div class="center-panel">
+    <div class="round">RONDA <span id="round">1</span></div>
+    <div class="timer" id="timer">2:00</div>
+  </div>
+
+  <div class="competitor red-side">
+    <h2 class="name">Competidor B</h2>
+    <div class="score" id="scoreB">0</div>
+    <div class="penalties">Faltas: <span id="penaltiesB">0</span></div>
+  </div>
+</div>
+
+<script src="scoredboard.js"></script>
+</body>
+</html>
