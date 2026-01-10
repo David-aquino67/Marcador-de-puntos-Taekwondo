@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Marcador IETKD</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+<div class="wrap">
+    <main class="container">
+        <header>
+            <h1>Marcador IETKD</h1>
+            <p>Elige la interfaz que deseas utilizar</p>
+        </header>
+
+        <section class="grid">
+
+            <article class="card">
+                <div class="card-content">
+                    <div class="badge"><span class="dot"></span> Interfaz Celular</div>
+                    <h2>Control desde el teléfono</h2>
+                    <p class="desc">
+                        Usa tu smartphone para controlar el marcador. Botones grandes, colores claros y diseño responsivo.
+                    </p>
+
+                    <div class="actions">
+                        <a href="interfaz_celular/control.html" class="btn btn--primary" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:20px; vertical-align:middle;">
+                                <path d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h10V4H7zm4 15h2v1h-2v-1z"/>
+                            </svg>
+                            Usar celular
+                        </a>
+
+                        <button class="btn btn--ghost" type="button" id="previewMobile">
+                            Vista previa
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-content">
+                    <div class="badge" style="--accent:#f59e0b"><span class="dot"></span> Interfaz Computadora</div>
+                    <h2>Marcador en pantalla</h2>
+                    <p class="desc">
+                        Visualiza el tablero de puntuación optimizado para monitores y proyectores.
+                    </p>
+
+                    <div class="actions">
+                        <a href="interfaz_compu/scoreboard.html" class="btn" rel="noopener">
+                            Ver marcador
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <footer>
+            <p>
+                Desarrollado por Carlos —
+                <a href="https://marcadoietkd.netlify.app" target="_blank" rel="noopener">Visitar Sitio</a>
+            </p>
+        </footer>
+    </main>
+</div>
+
+<script src="home.js"></script>
+</body>
+</html>
