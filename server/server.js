@@ -56,18 +56,19 @@ function startTimer() {
     }, 1000);
 }
 
-// --- CORRECCIÓN DE RUTAS ESTÁTICAS ---
-// Servir la raíz del proyecto
-app.use(express.static(path.join(__dirname, '/')));
-
-// Servir carpetas específicas si existen en la raíz
-app.use('/celular', express.static(path.join(__dirname, 'interfaz_celular')));
-app.use('/compu', express.static(path.join(__dirname, 'interfaz_compu')));
-
-// Ruta por defecto para verificar que el servidor vive
-app.get('/status', (req, res) => {
-    res.send('Servidor IETKD Operativo');
+// MODIFICACIÓN EN ESTA SECCIÓN:
+// No necesitamos servir archivos estáticos porque están en Netlify.
+// Esto evita el error "ENOENT" que viste en los logs.
+app.get('/', (req, res) => {
+    res.send('Servidor de Marcador IETKD: En funcionamiento y esperando conexiones.');
 });
+
+// Puedes borrar estas líneas para que el log de Render sea más limpio:
+// app.use(express.static(path.join(__dirname, '/')));
+// app.use('/celular', express.static(path.join(__dirname, 'interfaz_celular')));
+// app.use('/compu', express.static(path.join(__dirname, 'interfaz_compu')));
+
+// ... (El resto de tu lógica de io.on('connection') está perfecta)
 
 io.on('connection', (socket) => {
     console.log(`Conectado: ${socket.id}`);
