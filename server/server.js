@@ -10,10 +10,12 @@ app.use(cors()); // Permitir conexiones cruzadas
 const server = http.createServer(app);
 
 // CONFIGURACIÓN DE SOCKET.IO CON CORS
-const io = socketIo(server, {
+// En tu server.js, reemplaza la configuración de io por esta:
+const io = require('socket.io')(server, {
     cors: {
-        origin: "*", // En producción, puedes cambiar "*" por tu URL de Netlify
-        methods: ["GET", "POST"]
+        origin: "https://marcadoietkd.netlify.app", // Tu URL de Netlify
+        methods: ["GET", "POST"],
+        credentials: true
     }
 });
 
