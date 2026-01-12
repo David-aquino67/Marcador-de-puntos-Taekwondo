@@ -5,7 +5,12 @@ const path = require('path');
 const cors = require('cors'); // Importante instalar: npm install cors
 
 const app = express();
-app.use(cors()); // Permitir conexiones cruzadas
+app.use(cors({
+    origin: "https://marcadoietkd.netlify.app",
+    methods: ["GET", "POST"],
+    credentials: true
+}));
+ // Permitir conexiones cruzadas
 
 const server = http.createServer(app);
 
@@ -13,11 +18,13 @@ const server = http.createServer(app);
 // En tu server.js, reemplaza la configuración de io por esta:
 const io = require('socket.io')(server, {
     cors: {
-        origin: "https://marcadoietkd.netlify.app", // Tu URL de Netlify
+        origin: "https://marcadoietkd.netlify.app",
         methods: ["GET", "POST"],
         credentials: true
-    }
+    },
+    transports: ["polling", "websocket"] // 👈 IMPORTANTE
 });
+
 
 // USAR EL PUERTO DINÁMICO DE RENDER
 const PORT = process.env.PORT || 3000;

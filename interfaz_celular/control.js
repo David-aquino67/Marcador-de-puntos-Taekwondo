@@ -1,6 +1,9 @@
 // Conexión con el servidor Socket.IO
 // Asegúrate de que esta URL coincida con la dirección de tu servidor (ej: http://localhost:3000)
-const socket = io('https://marcador-de-puntos-taekwondo.onrender.com');
+const socket = io("https://marcador-de-puntos-taekwondo.onrender.com", {
+    transports: ["websocket"],
+    withCredentials: true
+});
 
 // 1. Manejador de Clics para Puntuación (Patadas y Puños)
 document.querySelectorAll('.score-btn:not(.penalty-btn)').forEach(button => {
