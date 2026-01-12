@@ -5,7 +5,7 @@
 // scoreboard.js (VERSIÓN FINAL Y LIMPIA)
 
 // Conexión con el servidor Socket.IO
-const socket = io();
+const socket = io('https://marcador-de-puntos-taekwondo.onrender.com');
 
 // Elementos del DOM para actualizar
 const scoreAEl = document.getElementById('scoreA');
